@@ -1,12 +1,8 @@
 import Header, {HomeTitle, HomeContent} from './contents/Home';
-//import Title, { FavFruit, SecondFavFruit, ExoticFruit, InfoOnExoticFruit } from './components/Fruits';
-//import {Test, MyTest} from './components/MyTest';
-////Embedding expressions
-//import Greeting from './components/Expressions';
-//import FavouriteFruit from './components/Favefruit';
-//
-////Class based components
-//import Greet from './components/Class';
+//Embedding expressions
+import Question ,{QuestionContent, Interests} from './contents/AboutMe';
+//Class based components
+import ReachOut from './contents/ContactMe';
 
 //Rendering children components inside parents, Everything enclosed in the "Parent" wrapper becomes a child
 import Parent from './contents/ContentWrapper';
@@ -18,6 +14,12 @@ function App() {
       <Header/>
       <HomeTitle/>
       <HomeContent/>
+
+      <Question/>
+      <QuestionContent/>
+      <Interests/>
+
+      <ReachOut email="sovereign.wawiye@gmail.com"/>
     
     </Parent>
   )

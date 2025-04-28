@@ -1,8 +1,9 @@
 import React from "react";
+
 //Class based components
-class Greet extends React.Component {
+class ReachOut extends React.Component {
     render() {
-        return <h3>Hello {this.props.name}</h3>
+        return <h4>Email address: {this.props.email}</h4>
     }
 }
-export default Greet;
+export default ReachOut;
