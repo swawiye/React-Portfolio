@@ -19,7 +19,7 @@ function App() {
       <QuestionContent/>
       <Interests/>
 
-      <ReachOut email="sovereign.wawiye@gmail.com"/>
+      <ReachOut email="sovereign.wawiye@gmail.com" phone="+254701374708" linkedin="Sovereign Wawiye"/>
     
     </Parent>
   )
