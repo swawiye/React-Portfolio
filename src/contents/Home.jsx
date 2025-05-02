@@ -1,10 +1,9 @@
-export const HomeTitle = () => {
-    return <h4>
-        The beautiful journey of today can only begin when we learn to let go of yesterday (Steve Maraboli)
-    </h4>
-}
-export const HomeContent = () => {
-    return <p>
+const HomeContent = () => {
+    return (
+    <div> 
+        <h1>My Portfolio</h1>
+        <h4>The beautiful journey of today can only begin when we learn to let go of yesterday (Steve Maraboli)</h4>
+        <p>
         This statement bears weight in each of our own lives. Our past is significant not only to the present 
         but also to the future. However, it does not define us. We ourselves are a collection of memories we 
         have made, experiences we have had and predicaments that we have encountered. As a result, our behaviour 
@@ -16,14 +15,12 @@ export const HomeContent = () => {
         with me as I dive deep to look within myself. Gaze into the mirror with me, as I reflect. I hope that 
         this experience can empower you to stop shying away from self-introspection and use self-reflection as 
         a tool to empower your being.
-    </p>
+        </p>
+    </div>
+    )
 }
 
-const Header = () => {
-    return <h1>My Portfolio</h1>
-}
-
-export default Header;
+export default HomeContent;
 
 
 
