@@ -1,7 +1,6 @@
 const HomeContent = () => {
     return (
     <div> 
-        <h1>My Portfolio</h1>
         <h4>The beautiful journey of today can only begin when we learn to let go of yesterday (Steve Maraboli)</h4>
         <p>
         This statement bears weight in each of our own lives. Our past is significant not only to the present 

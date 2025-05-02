@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import HomeContent from './contents/Home';
 //Embedding expressions
-import QuestionContent from './contents/AboutMe';
+import AboutContent from './contents/AboutMe';
 //Class based components
 import ReachOut from './contents/ContactMe';
 
@@ -11,7 +12,9 @@ import Parent from './contents/ContentWrapper';
 //Navbar
 import Navbar from './contents/Navbar';
 //Styling
-import "./App.css"
+
+
+import Dashboard from './contents/Dashboard';
 
 function App() {
   //let Component
@@ -30,10 +33,11 @@ function App() {
     <Router>
       <Parent>
         <Navbar/>
+        <Dashboard/>
         <div className='container'>
           <Routes>
             <Route path="/" element={<HomeContent/>}/>
-            <Route path="/aboutme" element={<QuestionContent/>}/>
+            <Route path="/aboutme" element={<AboutContent/>}/>
             <Route path="/contactme" element={<ReachOut/>}/>
           </Routes>
         </div>
@@ -52,3 +56,5 @@ export default App
 //  <Interests/>
 //  
 //  <ReachOut email="sovereign.wawiye@gmail.com" phone="+254701374708" linkedin="Sovereign Wawiye"/>
+
+
