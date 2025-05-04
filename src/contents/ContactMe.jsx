@@ -45,26 +45,36 @@ import { useState } from "react";
 //  <h3>Email address: sovereign.wawiye@gmail.com</h3>
 //  <h3>LinkedIn: Sovereign Wawiye</h3>
 
-import { useState } from "react";
-
 const ReachOut = () => {
     const initialValues = {username:"", email:"",password:""};
-    const [formValues, setFormValues] = useState(initialValues); 
+    const [formValues, setFormValues] = useState(initialValues);
+    
+    const handleInput = (event) => {
+        const {name, value} = event.target;
+        setFormValues({...formValues, [name]: value})
+        console.log(formValues);
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    }
+
     return (
         <div>
-            <form className="contact-form">
+            <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
+            <form onSubmit={handleSubmit} className="contact-form">
                 <h3>Reach out to me</h3>
                 <div>
                     <label className="form-label">Username</label>
-                    <input type="text" className="form-input" value={formValues}/>
+                    <input type="text" name="username" className="form-input" value={formValues.username} onChange={handleInput}/>
                 </div>
                 <div>
                     <label htmlFor="text" className="form-label">Email</label>
-                    <input type="text" className="form-input" value={formValues}/>
+                    <input type="text" name="email" className="form-input" value={formValues.email} onChange={handleInput}/>
                 </div>
                 <div>
                     <label htmlFor="text" className="form-label">Password</label>
-                    <input type="text" className="form-input" value={formValues}/>
+                    <input type="text" name="password" className="form-input" value={formValues.password} onChange={handleInput}/>
                 </div>
                 <button type="submit">Send</button>
             </form>
